@@ -1,13 +1,13 @@
 package stepsdefinitions;
 
-import data.TestData;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import manager.WebDriverManager;
 import org.junit.Assert;
 import pages.CheckoutCompletePage;
 
-import static data.TestData.*;
+import static data.TestData.CHECKOUT_URL;
+import static data.TestData.SUCCESSFUL_HEADER;
 
 public class CheckoutCompleteSteps {
 

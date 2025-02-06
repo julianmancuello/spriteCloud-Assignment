@@ -3,7 +3,6 @@ package stepsdefinitions;
 import io.cucumber.java.en.When;
 import manager.WebDriverManager;
 import pages.CheckoutConfirmationPage;
-import pages.CheckoutInformationPage;
 
 public class CheckoutConfirmationSteps {
 

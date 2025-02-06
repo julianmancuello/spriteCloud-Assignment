@@ -1,6 +1,5 @@
 package stepsdefinitions;
 
-import data.TestData;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
 import manager.WebDriverManager;
@@ -19,7 +18,6 @@ public class ProductsSteps {
     @When("the user add first {} products to cart")
     public void userAddRandomProductToCart(int quantityOfProducts) {
         listOfAddedProducts = productsPage.addToCartRandomProducts(quantityOfProducts);
-        System.out.println(listOfAddedProducts);
     }
 
     @And("click on the cart icon")

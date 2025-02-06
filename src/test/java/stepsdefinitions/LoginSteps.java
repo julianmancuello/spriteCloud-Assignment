@@ -20,28 +20,21 @@ public class LoginSteps {
 
     @Given("the user access to Sauce Demo")
     public void userAccessToSauceDemo() {
-        loginPage.navigateTo(AUT_URL);
+        loginPage.navigateTo(BASE_URL);
     }
 
     @And("the user logs in with {} credentials")
     @When("the user attempts to log in with {} credentials")
-    public void userLogInWithCredentials(String user) {
-        String userType;
-        switch (user) {
-            case "STANDARD_USER" -> userType = STANDARD_USER;
-            case "BLOCKED_USER" -> userType = BLOCKED_USER;
-            case "NON_EXISTING_USER" -> userType = NON_EXISTING_USER;
-            default -> throw new IllegalArgumentException("Invalid user type: " + user);
-        }
-        loginPage.loginUser(userType, MASTER_PASSWORD);
+    public void userLogInWithCredentials(UserType user) {
+        loginPage.loginUser(user.getValue(), MASTER_PASSWORD);
     }
 
     @Then("{} error icons and the error message for {} should be displayed")
-    public void errorIconsAndErrorMessageShouldBeDisplayed(int numberOfIcons, String error) {
+    public void errorIconsAndErrorMessageShouldBeDisplayed(int numberOfIcons, UserType error) {
         String errorType;
         switch (error) {
-            case "BLOCKED_USER" -> errorType = BLOCKED_USER_ERROR_MSG;
-            case "NON_EXISTING_USER" -> errorType = NON_EXISTING_USER_ERROR_MSG;
+            case BLOCKED_USER -> errorType = BLOCKED_USER_ERROR_MSG;
+            case NON_EXISTING_USER -> errorType = NON_EXISTING_USER_ERROR_MSG;
             default -> throw new IllegalArgumentException("Invalid error message: " + error);
         }
 

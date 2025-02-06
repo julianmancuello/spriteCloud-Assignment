@@ -6,7 +6,7 @@ import manager.WebDriverManager;
 import org.junit.Assert;
 import pages.CartPage;
 
-import static data.TestData.*;
+import static data.TestData.listOfAddedProducts;
 
 public class CartSteps {
 
@@ -18,11 +18,12 @@ public class CartSteps {
 
     @Then("check the products were added successfully to the cart")
     public void checkProductsWereAddedSuccessfullyToCart() {
-        Assert.assertTrue("The products information in the cart do not match the selected products.", cartPage.isEachSelectedProductPresentInCart(listOfAddedProducts));
+        Assert.assertTrue("The products information in the cart do not match the selected products.",
+                cartPage.isEachSelectedProductPresentInCart(listOfAddedProducts));
     }
 
-@Given("the user click on checkout button")
+    @Given("the user click on checkout button")
     public void userClickOnCheckoutButton() {
         cartPage.clickCheckoutButton();
-}
+    }
 }

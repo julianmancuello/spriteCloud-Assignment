@@ -23,15 +23,9 @@ public class LoginPage extends BasePage {
         super(driver);
     }
 
-    public void setUsername(String username) {
+    public void loginUser(String username, String password) {
         type(usernameField, username);
-    }
-
-    public void setPassword(String password) {
         type(passwordField, password);
-    }
-
-    public void clickLoginButton() {
         click(loginButton);
     }
 
@@ -41,11 +35,5 @@ public class LoginPage extends BasePage {
 
     public String getLoginErrorMessage() {
         return getText(loginErrorMessage);
-    }
-
-    public void loginUser(String username, String password) {
-        setUsername(username);
-        setPassword(password);
-        clickLoginButton();
     }
 }

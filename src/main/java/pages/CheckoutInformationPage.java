@@ -19,26 +19,10 @@ public class CheckoutInformationPage extends BasePage {
         super(driver);
     }
 
-    public void setFirstName(String firstName) {
-        type(firstNameField, firstName);
-    }
-
-    public void setLastName(String lastName) {
-        type(lastNameField, lastName);
-    }
-
-    public void setPostalCode(String postalCode) {
-        type(postalCodeField, postalCode);
-    }
-
-    public void clickContinueButton() {
-        click(continueButton);
-    }
-
     public void fillPersonalInformationForm(String firstName, String lastName, String postalCode) {
-        setFirstName(firstName);
-        setLastName(lastName);
-        setPostalCode(postalCode);
-        clickContinueButton();
+        type(firstNameField, firstName);
+        type(lastNameField, lastName);
+        type(postalCodeField, postalCode);
+        click(continueButton);
     }
 }

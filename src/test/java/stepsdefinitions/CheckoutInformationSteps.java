@@ -2,7 +2,6 @@ package stepsdefinitions;
 
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.When;
 import manager.WebDriverManager;
 import pages.CheckoutInformationPage;
 
