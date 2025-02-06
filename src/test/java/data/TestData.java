@@ -1,5 +1,7 @@
 package data;
 
+import java.util.List;
+
 public class TestData {
 
     public static final String AUT_URL = "https://www.saucedemo.com/";
@@ -11,4 +13,6 @@ public class TestData {
 
     public static final String BLOCKED_USER_ERROR_MSG = "Epic sadface: Sorry, this user has been locked out.";
     public static final String NON_EXISTING_USER_ERROR_MSG = "Epic sadface: Username and password do not match any user in this service";
+
+    public static List<String> listOfAddedProducts;
 }

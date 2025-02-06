@@ -1,5 +1,6 @@
 package stepsdefinitions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -22,6 +23,7 @@ public class LoginSteps {
         loginPage.navigateTo(AUT_URL);
     }
 
+    @And("the user logs in with {} credentials")
     @When("the user attempts to log in with {} credentials")
     public void userLogInWithCredentials(String user) {
         String userType;
