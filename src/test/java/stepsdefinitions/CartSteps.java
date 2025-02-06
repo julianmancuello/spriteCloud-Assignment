@@ -1,5 +1,6 @@
 package stepsdefinitions;
 
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import manager.WebDriverManager;
 import org.junit.Assert;
@@ -19,4 +20,9 @@ public class CartSteps {
     public void checkProductsWereAddedSuccessfullyToCart() {
         Assert.assertTrue("The products information in the cart do not match the selected products.", cartPage.isEachSelectedProductPresentInCart(listOfAddedProducts));
     }
+
+@Given("the user click on checkout button")
+    public void userClickOnCheckoutButton() {
+        cartPage.clickCheckoutButton();
+}
 }
