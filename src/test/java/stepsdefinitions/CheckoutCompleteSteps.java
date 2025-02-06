@@ -22,9 +22,9 @@ public class CheckoutCompleteSteps {
         Assert.assertEquals("Error: Purchase not completed", CHECKOUT_URL, checkoutCompletePage.getCurrentUrl());
     }
 
-    @And("successful purchase message and green tick displayed")
-    public void successfulPurchaseMessageAndGreenTickDisplayed() {
+    @And("successful purchase message and green check displayed")
+    public void successfulPurchaseMessageAndGreenCheckDisplayed() {
         Assert.assertEquals("Success header is incorrect", SUCCESSFUL_HEADER, checkoutCompletePage.getSuccessfulHeader());
-        Assert.assertTrue("The green tick is not displayed after the checkout", checkoutCompletePage.isGreenTickDisplayed());
+        Assert.assertTrue("The green check is not displayed after the checkout", checkoutCompletePage.isGreenCheckDisplayed());
     }
 }

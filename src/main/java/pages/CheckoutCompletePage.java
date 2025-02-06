@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 public class CheckoutCompletePage extends BasePage {
 
     @FindBy(className = "pony_express")
-    WebElement greenTick;
+    WebElement greenCheck;
     @FindBy(className = "complete-header")
     WebElement successfulHeader;
 
@@ -15,8 +15,8 @@ public class CheckoutCompletePage extends BasePage {
         super(driver);
     }
 
-    public boolean isGreenTickDisplayed() {
-        return isDisplayed(greenTick);
+    public boolean isGreenCheckDisplayed() {
+        return isDisplayed(greenCheck);
     }
 
     public String getSuccessfulHeader() {

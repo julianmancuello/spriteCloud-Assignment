@@ -17,7 +17,7 @@
         <maven.surefire.plugin.version>2.22.2</maven.surefire.plugin.version>
         <maven.compiler.version>17</maven.compiler.version>
         <dataproviderthreadcount.value>3</dataproviderthreadcount.value>
-        <selenium.version>4.27.0</selenium.version>
+        <selenium.version>4.28.1</selenium.version>
         <cucumber.version>7.2.0</cucumber.version>
         <restassured.version>5.3.0</restassured.version>
         <jackson.version>2.18.2</jackson.version>
@@ -83,7 +83,7 @@
         <!-- Selenium DevTools V131 dependency -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-devtools-v131</artifactId>
+            <artifactId>selenium-devtools-v132</artifactId>
             <version>${selenium.version}</version>
         </dependency>
 

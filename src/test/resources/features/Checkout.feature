@@ -13,5 +13,5 @@ Feature: Checkout Flow
       | John      | Smith    | 1111AA     |
     When the user click on finish button
     Then the purchase was completed successfully
-    And successful purchase message and green tick displayed
+    And successful purchase message and green check displayed
 
