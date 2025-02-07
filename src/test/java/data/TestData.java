@@ -1,6 +1,8 @@
 package data;
 
 import lombok.Getter;
+import models.responses.UserData;
+import models.responses.UserList;
 
 import java.util.List;
 
@@ -29,4 +31,7 @@ public class TestData {
     public static final String SUCCESSFUL_HEADER = "Thank you for your order!";
 
     public static List<String> listOfAddedProducts;
+
+    public static UserList userList;
+    public static final UserData EMMA_WONG = new UserData(3, "emma.wong@reqres.in", "Emma", "Wong", "https://reqres.in/img/faces/3-image.jpg");
 }
