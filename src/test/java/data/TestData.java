@@ -1,7 +1,7 @@
 package data;
 
+import api.models.responses.*;
 import lombok.Getter;
-import models.responses.*;
 
 import java.util.List;
 
