@@ -1,8 +1,7 @@
 package data;
 
 import lombok.Getter;
-import models.responses.UserData;
-import models.responses.UserList;
+import models.responses.*;
 
 import java.util.List;
 
@@ -34,4 +33,9 @@ public class TestData {
 
     public static UserList userList;
     public static final UserData EMMA_WONG = new UserData(3, "emma.wong@reqres.in", "Emma", "Wong", "https://reqres.in/img/faces/3-image.jpg");
+    public static final String ApiUser = "eve.holt@reqres.in";
+    public static final String ApiPassword = "cityslicka";
+    public static Token token;
+    public static ErrorMessage errorMessage;
+    public static InformationModified infoModified;
 }
