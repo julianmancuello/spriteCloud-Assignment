@@ -1,3 +1,4 @@
+@ui-test
 Feature: Checkout Flow
 
   Background:
