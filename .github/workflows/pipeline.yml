@@ -39,17 +39,19 @@ jobs:
           mkdir -p reports
           # Copy report files to reports directory
           cp -r target/cucumber-reports/cucumber-html-reports/* reports/
-          # Create the index.html file for redirection
-          echo '<!DOCTYPE html>
-          <html>
-            <head>
-              <meta http-equiv="refresh" content="0; url=overview-features.html">
-              <title>Redirecting...</title>
-            </head>
-            <body>
-              <p>If you are not redirected automatically, follow this <a href="overview-features.html">link</a>.</p>
-            </body>
-          </html>' > reports/index.html
+          # Rename overview-features.html to index.html
+          mv reports/overview-features.html reports/index.html
+#          # Create the index.html file for redirection
+#          echo '<!DOCTYPE html>
+#          <html>
+#            <head>
+#              <meta http-equiv="refresh" content="0; url=overview-features.html">
+#              <title>Redirecting...</title>
+#            </head>
+#            <body>
+#              <p>If you are not redirected automatically, follow this <a href="overview-features.html">link</a>.</p>
+#            </body>
+#          </html>' > reports/index.html
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
