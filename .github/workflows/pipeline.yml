@@ -41,7 +41,7 @@ jobs:
           cp -r target/cucumber-reports/cucumber-html-reports/* reports/
           # Duplicate overview-features.html as index.html
           cp reports/overview-features.html reports/index.html
-#          # Create the index.html file for redirection
+#          # Create the index.html file for redirection test
 #          echo '<!DOCTYPE html>
 #          <html>
 #            <head>
