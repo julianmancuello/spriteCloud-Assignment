@@ -1,0 +1,77 @@
+# .github/workflows/pipeline.yml
+name: Github Actions Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          java-version: '20'
+          distribution: 'temurin'
+
+      - name: Build with Maven
+        run: mvn clean install -DskipTests=true
+
+      - name: Run tests
+        run: mvn clean test #-Dcucumber.filter.tags="@api"
+
+      - name: Upload Cucumber reports
+        if: github.event_name == 'push'
+        uses: actions/upload-artifact@v4
+        with:
+          name: cucumber-html-report
+          path: target/cucumber-reports/cucumber-html-reports/**
+
+      - name: Set up Git user
+        if: github.event_name == 'push'
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions@github.com'
+
+      - name: Prepare reports for GitHub Pages
+        run: |
+          mkdir -p reports
+          # Copy report files to reports directory
+          cp -r target/cucumber-reports/cucumber-html-reports/* reports/
+          # Create the index.html file for redirection
+          echo '<!DOCTYPE html>
+          <html>
+            <head>
+              <meta http-equiv="refresh" content="0; url=overview-features.html">
+              <title>Redirecting...</title>
+            </head>
+            <body>
+              <p>If you are not redirected automatically, follow this <a href="overview-features.html">link</a>.</p>
+            </body>
+          </html>' > reports/index.html
+          cd reports
+          # Initialize a new git repository and fetch the gh-pages branch
+          git init
+          git remote add origin https://${{ secrets.USERNAME }}:${{ secrets.GH_PAT }}@github.com/${{ github.repository }}.git
+          git fetch origin gh-pages
+          git checkout gh-pages || git checkout --orphan gh-pages
+          git add .
+          git commit -m "Deploy reports to GitHub Pages"
+          git push -u origin gh-pages --force
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GH_PAT }}
+          publish_dir: ./reports
+          publish_branch: gh-pages
