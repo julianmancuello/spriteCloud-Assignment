@@ -39,8 +39,8 @@ jobs:
           mkdir -p reports
           # Copy report files to reports directory
           cp -r target/cucumber-reports/cucumber-html-reports/* reports/
-          # Rename overview-features.html to index.html
-          mv reports/overview-features.html reports/index.html
+          # Duplicate overview-features.html as index.html
+          cp reports/overview-features.html reports/index.html
 #          # Create the index.html file for redirection
 #          echo '<!DOCTYPE html>
 #          <html>
