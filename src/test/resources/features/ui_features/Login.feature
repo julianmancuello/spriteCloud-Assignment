@@ -1,4 +1,4 @@
-@ui-test @regressions
+@ui-test
 Feature: Login Functionality
 
   Scenario Outline: Validate error messages for invalid login attempts

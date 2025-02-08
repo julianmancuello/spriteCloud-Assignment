@@ -1,4 +1,4 @@
-@api-test @regressions
+@api-test
 Feature: APIs Functionality
 
   Scenario: Get user list and check user data

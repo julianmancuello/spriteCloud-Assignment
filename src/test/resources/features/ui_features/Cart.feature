@@ -1,4 +1,4 @@
-@ui-test @regressions
+@ui-test
 Feature: Cart Functionality
 
   Background:
