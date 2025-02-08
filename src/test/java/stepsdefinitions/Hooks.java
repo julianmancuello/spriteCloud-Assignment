@@ -1,4 +1,4 @@
-package hooks;
+package stepsdefinitions;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -15,7 +15,6 @@ public class Hooks {
 
     @Before
     public void setUp(Scenario scenario) {
-        System.out.println("Running: " + scenario.getName());
         isUiTest = scenario.getSourceTagNames().contains("@ui-test");
         isApiTest = scenario.getSourceTagNames().contains("@api-test");
         if (isUiTest) DriverManager.setUpWebDriver();

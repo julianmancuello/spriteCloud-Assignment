@@ -51,7 +51,6 @@ public class ApisSteps {
     @Given("modify name to {} and job to {} for user with ID {}")
     public void modifyNameAndJobForUserWithId(String name, String job, int id) {
         infoModified = usersApi.modifyUserInformationSuccessfully(name, job, id);
-        System.out.println(infoModified);
     }
 
     @Then("user information was changed to {} and {}")

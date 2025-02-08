@@ -1,4 +1,4 @@
-@ui-test
+@ui-test @regressions
 Feature: Checkout Flow
 
   Background:
