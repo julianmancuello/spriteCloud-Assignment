@@ -7,7 +7,7 @@ Feature: Checkout Flow
     When the user add first 4 products to cart
     And click on the cart icon
 
-  Scenario: Complete checkout successfully
+  Scenario: Validate successfully checkout
     Given the user click on checkout button
     And the user fill the personal information form
       | firstName | lastName | postalCode |

@@ -16,7 +16,6 @@ import java.util.List;
         features = "src/test/resources/features",
         glue = "stepsdefinitions",
         plugin = {"pretty", "json:target/cucumber-reports/cucumber.json"},
-        tags = ("@ui-test or @api-test"),
         publish = true
 )
 public class TestRunner {

@@ -18,9 +18,17 @@
         <maven.compiler.version>17</maven.compiler.version>
         <dataproviderthreadcount.value>3</dataproviderthreadcount.value>
         <selenium.version>4.28.1</selenium.version>
-        <cucumber.version>7.2.0</cucumber.version>
+        <junit.version>4.13.1</junit.version>
         <restassured.version>5.3.0</restassured.version>
         <jackson.version>2.18.2</jackson.version>
+        <cucumber.version>7.2.0</cucumber.version>
+        <gherkin.version>5.1.0</gherkin.version>
+        <gherkin.jvm.version>1.0.4</gherkin.jvm.version>
+        <cucumber.reporting.version>5.7.5</cucumber.reporting.version>
+        <cucumber.html.version>0.2.7</cucumber.html.version>
+        <lombok.version>1.18.36</lombok.version>
+        <webdrivermanager.version>5.9.2</webdrivermanager.version>
+        <slf4j.simple.version>2.0.16</slf4j.simple.version>
         <skipTests>false</skipTests>
     </properties>
 
@@ -80,7 +88,7 @@
             <version>${selenium.version}</version>
         </dependency>
 
-        <!-- Selenium DevTools V131 dependency -->
+        <!-- Selenium DevTools V132 dependency -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-devtools-v132</artifactId>
@@ -91,7 +99,7 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.13.1</version>
+            <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
 
@@ -132,37 +140,37 @@
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>gherkin</artifactId>
-            <version>5.1.0</version>
+            <version>${gherkin.version}</version>
         </dependency>
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>gherkin-jvm-deps</artifactId>
-            <version>1.0.4</version>
+            <version>${gherkin.jvm.version}</version>
         </dependency>
 
         <!-- Cucumber reporting dependencies -->
         <dependency>
             <groupId>net.masterthought</groupId>
             <artifactId>cucumber-reporting</artifactId>
-            <version>5.7.5</version>
+            <version>${cucumber.reporting.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-html</artifactId>
-            <version>0.2.7</version>
+            <version>${cucumber.html.version}</version>
         </dependency>
         <dependency>
             <groupId>net.masterthought</groupId>
             <artifactId>cucumber-sandwich</artifactId>
-            <version>5.7.5</version>
+            <version>${cucumber.reporting.version}</version>
         </dependency>
 
         <!-- Lombok Dependency -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.36</version>
+            <version>${lombok.version}</version>
             <scope>provided</scope>
         </dependency>
 
@@ -170,14 +178,14 @@
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
-            <version>5.9.2</version>
+            <version>${webdrivermanager.version}</version>
         </dependency>
 
         <!-- SLF4J Simple Provider dependency -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
-            <version>2.0.16</version>
+            <version>${slf4j.simple.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>

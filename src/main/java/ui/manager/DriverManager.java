@@ -6,8 +6,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-import java.util.Arrays;
-
 public class DriverManager {
 
     @Getter
@@ -24,8 +22,6 @@ public class DriverManager {
 
     private static ChromeOptions setChromeOptions() {
         ChromeOptions options = new ChromeOptions();
-        //options.setExperimentalOption("excludeSwitches", Arrays.asList("enable-automation"));
-        //options.addArguments("--start-maximized");
         options.addArguments("--headless");
         options.addArguments("--disable-gpu");
         return options;
