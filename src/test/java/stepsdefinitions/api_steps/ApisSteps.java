@@ -1,10 +1,10 @@
 package stepsdefinitions.api_steps;
 
+import api.services.LoginApi;
+import api.services.UsersApi;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
-import api.services.LoginApi;
-import api.services.UsersApi;
 
 import static data.TestData.*;
 

@@ -1,11 +1,12 @@
 package api.services;
 
-import io.restassured.response.Response;
 import api.models.requests.UserInformation;
 import api.models.responses.InformationModified;
 import api.models.responses.UserList;
+import io.restassured.response.Response;
 
-import static api.endpoints.Endpoints.*;
+import static api.endpoints.Endpoints.USERS_ENDPOINT;
+import static api.endpoints.Endpoints.USER_ENDPOINT;
 import static io.restassured.RestAssured.given;
 
 public class UsersApi extends BaseApi {

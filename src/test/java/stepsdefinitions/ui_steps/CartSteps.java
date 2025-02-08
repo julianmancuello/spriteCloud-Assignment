@@ -2,8 +2,8 @@ package stepsdefinitions.ui_steps;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import ui.manager.DriverManager;
 import org.junit.Assert;
+import ui.manager.DriverManager;
 import ui.pages.CartPage;
 
 import static data.TestData.listOfAddedProducts;

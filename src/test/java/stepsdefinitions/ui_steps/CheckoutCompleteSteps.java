@@ -2,8 +2,8 @@ package stepsdefinitions.ui_steps;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
-import ui.manager.DriverManager;
 import org.junit.Assert;
+import ui.manager.DriverManager;
 import ui.pages.CheckoutCompletePage;
 
 import static data.TestData.CHECKOUT_URL;

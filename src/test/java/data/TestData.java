@@ -9,7 +9,7 @@ public class TestData {
 
     //UI static data
     @Getter
-    public enum UserType{
+    public enum UserType {
         STANDARD_USER("standard_user"),
         BLOCKED_USER("locked_out_user"),
         NON_EXISTING_USER("non_existing_user");
