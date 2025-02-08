@@ -86,7 +86,12 @@ Project created for spriteCloud technical assessment. It includes UI and API tes
 git clone https://github.com/julianmancuello/spriteCloud-Assignment.git
 ```
 2. Import the project into IntelliJ IDEA or any compatible IDE.
-3. Ensure Java 20 is configured in the ```PATH```.
+3. Ensure environment configuration:
+   - Java 20 should be configured in the ```PATH```.
+   - Maven must be installed locally. Verify the installation by running:
+     ```bash
+     mvn -version
+     ```
 4. Navigate to the project directory and install the required dependencies using Maven:
 ```bash
 mvn clean install
