@@ -17,13 +17,9 @@ public class CheckoutCompleteSteps {
         this.checkoutCompletePage = new CheckoutCompletePage(DriverManager.getDriver());
     }
 
-    @Then("the purchase was completed successfully")
-    public void purchaseWasCompletedSuccessfully() {
+    @Then("the purchase was completed with a success message and green check")
+    public void purchaseWasCompletedWithASuccessMessageAndGreenCheck() {
         Assert.assertEquals("Error: Purchase not completed", CHECKOUT_URL, checkoutCompletePage.getCurrentUrl());
-    }
-
-    @And("successful purchase message and green check displayed")
-    public void successfulPurchaseMessageAndGreenCheckDisplayed() {
         Assert.assertEquals("Success header is incorrect", SUCCESSFUL_HEADER, checkoutCompletePage.getSuccessfulHeader());
         Assert.assertTrue("The green check is not displayed after the checkout", checkoutCompletePage.isGreenCheckDisplayed());
     }

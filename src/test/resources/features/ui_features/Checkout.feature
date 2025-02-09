@@ -13,6 +13,5 @@ Feature: Checkout Flow
       | firstName | lastName | postalCode |
       | John      | Smith    | 1111AA     |
     When the user click on finish button
-    Then the purchase was completed successfully
-    And successful purchase message and green check displayed
+    Then the purchase was completed with a success message and green check
 
