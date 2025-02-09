@@ -2,7 +2,7 @@
 
 ## Description
 
-Project created for spriteCloud technical assessment. It includes UI and API test automation implementation and execution.
+Project created for spriteCloud technical assignment. It includes UI and API test automation implementation and execution.
 
 ## Features
 
