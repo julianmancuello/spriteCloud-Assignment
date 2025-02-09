@@ -7,7 +7,6 @@ import java.util.List;
 
 public class TestData {
 
-    //UI static data
     @Getter
     public enum UserType {
         STANDARD_USER("standard_user"),
@@ -21,6 +20,12 @@ public class TestData {
         }
     }
 
+    /**
+    * Using static variables as test date is not the best practice, but I am using them for simplicity.
+    * In a real-world scenario, I would use Context Store variables to manage data between steps
+    * and pipeline variables for secrets.
+    */
+
     public static final String MASTER_PASSWORD = "secret_sauce";
 
     public static final String BASE_URL = "https://www.saucedemo.com/";
@@ -30,15 +35,12 @@ public class TestData {
     public static final String NON_EXISTING_USER_ERROR_MSG = "Epic sadface: Username and password do not match any user in this service";
     public static final String SUCCESSFUL_HEADER = "Thank you for your order!";
 
-    //UI context data
     public static List<String> listOfAddedProducts;
 
-    //API static data
     public static final UserData EMMA_WONG = new UserData(3, "emma.wong@reqres.in", "Emma", "Wong", "https://reqres.in/img/faces/3-image.jpg");
     public static final String ApiUser = "eve.holt@reqres.in";
     public static final String ApiPassword = "cityslicka";
 
-    //API context data
     public static UserList userList;
     public static Token token;
     public static ErrorMessage errorMessage;

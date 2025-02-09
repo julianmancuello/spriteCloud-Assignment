@@ -21,7 +21,7 @@ public class ProductsSteps {
     }
 
     @And("click on the cart icon")
-    public void ClickOnCartIcon() {
+    public void clickOnCartIcon() {
         productsPage.clickCart();
     }
 }
